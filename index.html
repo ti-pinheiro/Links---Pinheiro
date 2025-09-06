@@ -3,21 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Portal de Links da Empresa</title>
+  <!-- Biblioteca de ícones (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f9;
+      background: #121212;
+      color: #e0e0e0;
       margin: 0;
       padding: 0;
     }
     header {
-      background: #0056b3;
+      background: #1f1f1f;
       color: #fff;
       padding: 20px;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+    header img {
+      height: 50px;
     }
     h1 {
       margin: 0;
+      font-size: 24px;
     }
     .search-box {
       margin: 20px auto;
@@ -29,7 +41,9 @@
       padding: 10px;
       font-size: 16px;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid #333;
+      background: #1f1f1f;
+      color: #fff;
     }
     .container {
       display: grid;
@@ -40,31 +54,46 @@
       margin: auto;
     }
     .card {
-      background: #fff;
+      background: #1e1e1e;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h2 {
       font-size: 18px;
       margin-bottom: 10px;
-      color: #0056b3;
+      color: #4dabf7;
     }
     .card ul {
       list-style: none;
       padding: 0;
     }
     .card li {
-      margin: 8px 0;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .card a {
       text-decoration: none;
-      color: #333;
+      color: #e0e0e0;
       font-size: 16px;
     }
     .card a:hover {
-      color: #0056b3;
+      color: #4dabf7;
       text-decoration: underline;
+    }
+    footer {
+      background: #1f1f1f;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 14px;
     }
   </style>
   <script>
@@ -80,7 +109,9 @@
 </head>
 <body>
   <header>
-    <h1>🌐 Portal de Links da Empresa</h1>
+    <!-- Coloque o caminho da logo da sua empresa abaixo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo Empresa">
+    <h1>Portal de Links da Empresa</h1>
   </header>
 
   <div class="search-box">
@@ -89,28 +120,32 @@
 
   <div class="container">
     <div class="card">
-      <h2>TI</h2>
+      <h2><i class="fa-solid fa-computer"></i> TI</h2>
       <ul>
-        <li><a href="https://suporte.seusite.com" target="_blank">Suporte TI</a></li>
-        <li><a href="https://monitoramento.seusite.com" target="_blank">Monitoramento</a></li>
+        <li><i class="fa-solid fa-headset"></i><a href="https://suporte.seusite.com" target="_blank">Suporte TI</a></li>
+        <li><i class="fa-solid fa-chart-line"></i><a href="https://monitoramento.seusite.com" target="_blank">Monitoramento</a></li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>Financeiro</h2>
+      <h2><i class="fa-solid fa-coins"></i> Financeiro</h2>
       <ul>
-        <li><a href="https://erp.seusite.com" target="_blank">ERP</a></li>
-        <li><a href="https://contas.seusite.com" target="_blank">Contas a Pagar</a></li>
+        <li><i class="fa-solid fa-file-invoice-dollar"></i><a href="https://erp.seusite.com" target="_blank">ERP</a></li>
+        <li><i class="fa-solid fa-money-bill"></i><a href="https://contas.seusite.com" target="_blank">Contas a Pagar</a></li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>RH</h2>
+      <h2><i class="fa-solid fa-users"></i> RH</h2>
       <ul>
-        <li><a href="https://rh.seusite.com" target="_blank">Portal RH</a></li>
-        <li><a href="https://beneficios.seusite.com" target="_blank">Benefícios</a></li>
+        <li><i class="fa-solid fa-id-card"></i><a href="https://rh.seusite.com" target="_blank">Portal RH</a></li>
+        <li><i class="fa-solid fa-gift"></i><a href="https://beneficios.seusite.com" target="_blank">Benefícios</a></li>
       </ul>
     </div>
   </div>
+
+  <footer>
+    © 2025 Sua Empresa - Suporte TI: suporte@empresa.com
+  </footer>
 </body>
 </html>
