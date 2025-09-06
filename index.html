@@ -71,4 +71,46 @@
     function searchLinks() {
       const input = document.getElementById("search").value.toLowerCase();
       const cards = document.querySelectorAll(".card");
-      cards.forEach(card =>
+      cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>🌐 Portal de Links da Empresa</h1>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="search" onkeyup="searchLinks()" placeholder="🔍 Buscar link...">
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>TI</h2>
+      <ul>
+        <li><a href="https://suporte.seusite.com" target="_blank">Suporte TI</a></li>
+        <li><a href="https://monitoramento.seusite.com" target="_blank">Monitoramento</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Financeiro</h2>
+      <ul>
+        <li><a href="https://erp.seusite.com" target="_blank">ERP</a></li>
+        <li><a href="https://contas.seusite.com" target="_blank">Contas a Pagar</a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>RH</h2>
+      <ul>
+        <li><a href="https://rh.seusite.com" target="_blank">Portal RH</a></li>
+        <li><a href="https://beneficios.seusite.com" target="_blank">Benefícios</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
